@@ -1,0 +1,38 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false"
+      style="background-color: 
+#CFD8DC
+">
+    <mat-toolbar class="center" >COINS</mat-toolbar>
+    <mat-nav-list>
+      <button class="btn" (click) = "getChart(0)">Bitcoin</button>
+      <button class="btn" (click) = "getChart(1)">Ethereum</button>
+      <button class="btn" (click) = "getChart(2)">Ripple</button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="main-container">
+    <mat-toolbar color="primary" >
+      <button 
+        class="menu-button"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon  aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div  class="center"><span>LIVE MARKET CHART</span></div>
+      
+    </mat-toolbar> <ng-content> </ng-content>
+    <!-- display chart -->
+    <app-my-bar-chart ></app-my-bar-chart>
+    <!-- display chart -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

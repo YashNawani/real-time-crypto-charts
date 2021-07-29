@@ -1,0 +1,19 @@
+<!-- <button (click) = "getvalues(0)">Bitcoin</button>
+<button (click) = "getvalues(1)">ETH</button>
+<button (click) = "getvalues(2)">XRP</button> -->
+
+<div>
+    <div style="display: block;" class="pre-chart">
+      <canvas baseChart class="chart"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="'line'"
+              [plugins]="lineChartPlugins"
+              [colors]="lineChartColors"
+              >
+      </canvas>
+    </div>
+  </div>
+  
