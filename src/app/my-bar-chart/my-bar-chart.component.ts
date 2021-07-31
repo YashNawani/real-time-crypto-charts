@@ -83,7 +83,7 @@ export class MyBarChartComponent implements OnInit {
 
 
 
-    public noOfCoins = 3
+    public noOfCoins = 10
     public selectedCoin = 0
     public coins : Array<Array<{data: number, time: string, label: string}>>
 
@@ -164,7 +164,7 @@ export class MyBarChartComponent implements OnInit {
                 // let time = coin.price_timestamp
                 let j=0
                 res.forEach(e => {
-                  this.addData(j++, e.currency, e.price_timestamp, e.price)
+                  this.addData(j++, e.id, e.price_timestamp, e.current_price)
                 });
 
                 //this.addData(i,currency,time, price);

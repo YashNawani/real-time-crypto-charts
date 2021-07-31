@@ -42,8 +42,8 @@ export class AppComponent implements OnInit {
     this.chartService.getCurrency() 
     .subscribe(res =>{
       let coin = res[0]
-      let price = coin.price
-      let currency = coin.currency
+      let price = coin.current_price
+      let currency = coin.id
       
         
        this.addData(this.chart, currency, price);

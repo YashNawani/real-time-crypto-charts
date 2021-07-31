@@ -12,7 +12,7 @@ export class ChartService {
 
 
   getCurrency() : Observable<coin[]>{
-    return this.http.get<coin[]>('https://api.nomics.com/v1/currencies/ticker?key=8172059f0309a50fb7dea7b0672ad7a2a7177ac7&ids=BTC,ETH,XRP&convert=INR&per-page=100&page=1');
+    return this.http.get<coin[]>('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false');
 
   }
 }

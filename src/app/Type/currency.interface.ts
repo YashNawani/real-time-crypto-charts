@@ -1,6 +1,6 @@
 export interface coin   {
     
-    currency : string
-    price : number
+    id : string
+    current_price : number
     price_timestamp : string
   }
